@@ -5,6 +5,6 @@ public class Service {
 
     public ResponseModel getData(RequestModel requestModel) {
 
-        return new ResponseModel();
+        return new ResponseModel(requestModel);
     }
 }

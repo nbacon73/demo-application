@@ -1,20 +1,24 @@
-<html lang="ja">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <body>
     <h1>計算ツール</h1>
     <p>簡単な計算ができます</p>
 
     <h2>入力</h2>
-    <form>
+    <form action="/index" method="get">
         <p>それぞれ、1から10までの数字を入力できます</p>
-        <input type="text">
-        <input type="text">
+        <input type="text" name="num1" pattern="^[1-9]$|^10$">
+        <input type="text" name="num2" pattern="^[1-9]$|^10$">
         <input type="submit">
     </form>
 
     <h2>足し算</h2>
+    <p th:text="${data.addition}"></p>
     <h2>引き算</h2>
+    <p th:text="${data.subtraction}"></p>
     <h2>掛け算</h2>
+    <p th:text="${data.multiplication}"></p>
     <h2>割り算</h2>
+    <p th:text="${data.division}"></p>
 
 </body>
 </html>
